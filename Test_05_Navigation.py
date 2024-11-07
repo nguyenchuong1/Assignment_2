@@ -17,9 +17,7 @@ def test_navigation_main_bar_not_login(driver):
     "/html/body/section[1]/header/div/div/div[3]/ul/li[3]/a",  # Thực đơn
     "/html/body/section[1]/header/div/div/div[3]/ul/li[4]/a",  # Liên hệ
     "/html/body/section[1]/header/div/div/div[3]/ul/li[5]/a"  # Cart  
-]
-
-
+    ]
 
     for xpath in buttons:
      
@@ -103,9 +101,6 @@ def test_navigation_icon(driver):
     assert "https://www.instagram.com/nguyenchuong010866az/" in driver.current_url
     driver.back()    
     time.sleep(2)
-    
-    
- 
 def test_menu_category_navigation(driver): # kiểm tra danh mục của thực đơn có chuyển trang từng loại không 
     driver.get("http://localhost/B08/index.php")
     driver.find_element(By.CLASS_NAME, "menu-bar").click()

@@ -60,7 +60,7 @@ def test_empty_register(driver):
     assert alert_text == "vui lòng nhập tên đăng nhập !"  # Kiểm tra nội dung
     alert.accept() 
     
-def Test_registration_username_already_exists(driver):
+def test_registration_username_already_exists(driver):
     driver.get("http://localhost/B08/index.php")
     driver.find_element(By.CLASS_NAME, "menu-bar").click()
     time.sleep(1)
@@ -87,7 +87,7 @@ def Test_registration_username_already_exists(driver):
     alert = driver.switch_to.alert
     alert_text = alert.text
     assert alert_text == "Tài khoản đã tồn tại, vui lòng chọn tên đăng nhập khác."  # Kiểm tra nội dung
-    alert.accept() 
+     
 
 def test_wrong_password_re_enter(driver):
     driver.get("http://localhost/B08/index.php")

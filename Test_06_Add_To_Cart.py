@@ -331,7 +331,6 @@ def test_cancel_order(driver):
     status =  driver.find_element(By.XPATH, " /html/body/section[3]/div/table[2]/tbody/tr[2]/td[12]").text
     assert "Đơn hàng đã bị hủy" == status
     
-    
 #10 Kiểm tra khi đặt sản phẩm vượt quá số lượng mà web hiện có 
 def test_order_product_beyond_existing_quantity(driver):
     driver.get("http://localhost/B08/index.php")  # Trang web đã login và thêm sản phẩm vào giỏ

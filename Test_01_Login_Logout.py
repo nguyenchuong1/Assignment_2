@@ -60,6 +60,6 @@ def test_logout(driver): # thoát ra
     time.sleep(1)
     driver.find_element(By.CLASS_NAME, "menu-bar").click()
     time.sleep(1)
-    driver.find_element(By.LINK_TEXT, "Đăng xuất").click()
+    driver.find_element(By.XPATH, "/html/body/section[1]/header/div/div/div[3]/ul/li[7]/a").click()
     time.sleep(1)
     assert 'http://localhost/B08/index.php?dangxuat=1' in driver.current_url
